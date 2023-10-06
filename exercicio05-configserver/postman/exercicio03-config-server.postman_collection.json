@@ -1,0 +1,370 @@
+{
+	"info": {
+		"_postman_id": "ea60e7a9-3cb7-4183-ac4c-0d86fb77307a",
+		"name": "exercicio03-config-server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29331482"
+	},
+	"item": [
+		{
+			"name": "eureka-server",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/eureka-server/dev",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"eureka-server",
+						"dev"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8888/eureka-server/dev",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/eureka-server/dev",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"eureka-server",
+								"dev"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Oct 2023 12:45:29 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"eureka-server\",\n    \"profiles\": [\n        \"dev\"\n    ],\n    \"label\": null,\n    \"version\": \"da5c734eb40c788c3d3ed08cb989db650c9e0fea\",\n    \"state\": null,\n    \"propertySources\": [\n        {\n            \"name\": \"https://github.com/juniorpj1/iftm-newsletter-config-repo/eureka-server-dev.yml\",\n            \"source\": {\n                \"spring.application\": \"\",\n                \"spring.name\": \"eureka-server\",\n                \"server.port\": 8761,\n                \"eureka.client.register-with-eureka\": false,\n                \"eureka.client.fetch-registry\": false\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "api-gateway",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/eureka-client-api-gateway/dev",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"eureka-client-api-gateway",
+						"dev"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api-gateway",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/eureka-client-api-gateway/dev",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"eureka-client-api-gateway",
+								"dev"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Oct 2023 16:09:22 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"eureka-client-api-gateway\",\n    \"profiles\": [\n        \"dev\"\n    ],\n    \"label\": null,\n    \"version\": \"ad609c628bd0d30af3bc3a0f7dc984d70eec4b82\",\n    \"state\": null,\n    \"propertySources\": [\n        {\n            \"name\": \"https://github.com/juniorpj1/iftm-newsletter-config-repo/eureka-client-api-gateway-dev.yml\",\n            \"source\": {\n                \"spring.application.name\": \"eureka-client-api-gateway\",\n                \"spring.cloud.gateway.enabled\": true,\n                \"spring.cloud.gateway.discovery.locator.enabled\": true,\n                \"spring.cloud.gateway.discovery.locator.lower-case-service-id\": true,\n                \"server.port\": 8765,\n                \"eureka.instance.instance-id\": \"${spring.application.name}:${spring.application.instance_id:${random.value}}\",\n                \"eureka.client.service-url.defaultZone\": \"http://localhost:8761/eureka\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "logpool",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/eureka-client-logpool-dev/dev",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"eureka-client-logpool-dev",
+						"dev"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "logpool",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/eureka-client-logpool-dev/dev",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"eureka-client-logpool-dev",
+								"dev"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Oct 2023 16:10:55 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"eureka-client-logpool-dev\",\n    \"profiles\": [\n        \"dev\"\n    ],\n    \"label\": null,\n    \"version\": \"ad609c628bd0d30af3bc3a0f7dc984d70eec4b82\",\n    \"state\": null,\n    \"propertySources\": [\n        {\n            \"name\": \"https://github.com/juniorpj1/iftm-newsletter-config-repo/eureka-client-logpool-dev.yml\",\n            \"source\": {\n                \"spring.application.name\": \"eureka-client-logpool\",\n                \"spring.data.mongodb.port\": 27017,\n                \"spring.data.mongodb.host\": \"localhost\",\n                \"spring.data.mongodb.database\": \"newsletter\",\n                \"spring.rabbitmq.addresses\": \"amqps://deipzzxi:V5qesrSwgQYQkK7C3Pd3sU9ZFERBJx6E@shark.rmq.cloudamqp.com/deipzzxi\",\n                \"spring.rabbitmq.queue\": \"newsletter.queue\",\n                \"server.port\": \"${PORT:0}\",\n                \"eureka.instance.instance-id\": \"${spring.application.name}:${spring.application.instance_id:${random.value}}\",\n                \"eureka.client.service-url.defaultZone\": \"http://localhost:8761/eureka\",\n                \"newsletter.rabbitmq.exchange\": \"newsletter.exchange\",\n                \"newsletter.rabbitmq.routingKey\": \"newsletter.post.routingKey\",\n                \"newsletter.rabbitmq.queue\": \"newsletter.queue\",\n                \"logging.level.org.springframework.data.mongodb.core.MongoTemplate\": \"DEBUG\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "actuator",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/eureka-client-newsletter/actuator",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"eureka-client-newsletter",
+						"actuator"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "actuator-example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/eureka-client-newsletter/actuator",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"eureka-client-newsletter",
+								"actuator"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "transfer-encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/vnd.spring-boot.actuator.v3+json"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Oct 2023 16:44:51 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://host.docker.internal:51547/actuator\",\n            \"templated\": false\n        },\n        \"refresh\": {\n            \"href\": \"http://host.docker.internal:51547/actuator/refresh\",\n            \"templated\": false\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "post-actuator-refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/eureka-client-newsletter/actuator/refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"eureka-client-newsletter",
+						"actuator",
+						"refresh"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "actuator-refresh-example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/eureka-client-newsletter/actuator/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"eureka-client-newsletter",
+								"actuator",
+								"refresh"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "transfer-encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/vnd.spring-boot.actuator.v3+json"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Oct 2023 16:44:51 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://host.docker.internal:51547/actuator\",\n            \"templated\": false\n        },\n        \"refresh\": {\n            \"href\": \"http://host.docker.internal:51547/actuator/refresh\",\n            \"templated\": false\n        }\n    }\n}"
+				},
+				{
+					"name": "actuator-refresh-example2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/eureka-client-newsletter/actuator/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"eureka-client-newsletter",
+								"actuator",
+								"refresh"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "transfer-encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/vnd.spring-boot.actuator.v3+json"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Oct 2023 17:09:57 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    \"config.client.version\",\n    \"newsletter.rabbitmq.queue2\"\n]"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          default-label: main # default branch name
+          uri: https://github.com/juniorpj1/iftm-newsletter-config-repo
+
+server:
+  port: 8888
